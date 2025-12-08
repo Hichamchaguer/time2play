@@ -17,6 +17,10 @@
 L’application offre une interface intuitive, des informations détaillées sur chaque terrain (localisation, horaire, prix, type de surface), ainsi qu’un système de confirmation instantanée. Avec Time2Play, organiser une partie de foot n’a jamais été aussi facile et pratique.
 </p>
 
+<h2>Live Demo</h2>
+
+![Demo](assets/illustration.gif)
+
 <h2>🛠️ Technologies</h2>
 
 <ul>
@@ -36,3 +40,4 @@ L’application offre une interface intuitive, des informations détaillées sur
 <h3>cd time2play</h3>
 <h3>npm run build & npm run dev</h3>
 <h3>Browse to "localhost:5173"</h3>
+
