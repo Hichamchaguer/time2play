@@ -27,11 +27,13 @@ L’application offre une interface intuitive, des informations détaillées sur
   <li>HTML</li>
   <li>CSS</li>
   <li>JavaScript</li>
+  <li>Postgresql</li>
 </ul>
 <h3>Frameworks and Libreries </h3>
 <ul>
   <li>React</li>
   <li>Tailwind</li>
+  <li>Laravel</li>
 </ul>
 
 <h2>🏗️ Installation & Setup</h2>
@@ -40,4 +42,5 @@ L’application offre une interface intuitive, des informations détaillées sur
 <h3>cd time2play</h3>
 <h3>npm run build & npm run dev</h3>
 <h3>Browse to "localhost:5173"</h3>
+
 
