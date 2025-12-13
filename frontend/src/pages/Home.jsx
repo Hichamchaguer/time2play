@@ -173,7 +173,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-10 md:px-20">
           {[
             {
-              name: "Yassine",
+              name: "Robert",
               img: "/images/user1.jpg",
               text: "Grâce à Time2Play, j'ai pu rencontrer des joueurs de mon niveau et améliorer mon jeu tout en m'amusant. Je recommande vivement cette application pour tous les passionnés du foot !",
             },
