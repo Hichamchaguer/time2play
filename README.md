@@ -1,5 +1,5 @@
 <h1>Time2Play</h1>
-<h2>Contributors</h2>
+<h2>Contributors</h2> 
 <ul>
   <li>MohamedKarim Kribi</li>
   <li>Hicham CHAGUER</li>
@@ -42,5 +42,6 @@ L’application offre une interface intuitive, des informations détaillées sur
 <h3>cd time2play</h3>
 <h3>npm run build & npm run dev</h3>
 <h3>Browse to "localhost:5173"</h3>
+
 
 
