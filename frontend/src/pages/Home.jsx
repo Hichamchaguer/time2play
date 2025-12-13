@@ -13,8 +13,8 @@ import {
   FaUserFriends,
   FaCreditCard,
   FaShieldAlt,
+  FaFacebook, FaInstagram, FaTwitter, 
 } from "react-icons/fa";
-
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,7 +63,7 @@ const Home = () => {
               </motion.a>
             )
           )}
-        </nav>
+        </nav>                                                                                                           t555
       </header>
 
       {/* ---------------------------------- HERO VIDEO ---------------------------------- */}
@@ -164,6 +164,148 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ---------------------------------- EXPÉRIENCE DE JEUX ---------------------------------- */}
+      <section id="expérience" className="py-20 bg-white text-black">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-4">
+            Expérience de jeux
+          </h2>
+          <p className="text-xl text-center text-gray-600 mb-16">
+            Comment ça fonctionne ?
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Carte 1 */}
+            <motion.a
+              href="/reservation"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.6 }}
+              className="block cursor-pointer"
+            >
+              <div className="mb-4">
+                <img
+                  src="/images/jeux1.jpg"
+                  alt="Communauté Time2Play"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 text-center">
+                Comment trouver mes amis et faire partie de la communauté Time2Play
+              </h3>
+            </motion.a>
+
+            {/* Carte 2 */}
+            <motion.a
+              href="/reservation"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="block cursor-pointer"
+            >
+              <div className="mb-4">
+                <img
+                  src="/images/jeux3.jpg"
+                  alt="Réservation terrain"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 text-center">
+                Comment réserver un terrain dans votre Club préféré
+              </h3>
+            </motion.a>
+
+            {/* Carte 3 */}
+            <motion.a
+              href="/reservation"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="block cursor-pointer"
+            >
+              <div className="mb-4">
+                <img
+                  src="/images/jeux4.jpg"
+                  alt="Paiement divisé"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 text-center">
+                Comment diviser le paiement d'une réservation via l'application Time2Play
+              </h3>
+            </motion.a>
+          </div>
+        </div>
+      </section>
+
+    {/* ---------------------------------- SECTION : SLIDER TERRAINS ---------------------------------- */}
+<section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-6">
+
+        <h2 className="text-4xl font-bold text-center mb-4 text-gray-800">
+          Découvrez l’application Time2Play
+        </h2>
+        <p className="text-xl text-center text-gray-600 mb-16">
+          Découvrez nos meilleurs terrains et réservez votre créneau
+        </p>
+
+        {/* SLIDER */}
+        <motion.div
+          className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory 
+                    [-ms-overflow-style:none] [scrollbar-width:none] 
+                    [&::-webkit-scrollbar]:hidden"
+        >
+
+          {[
+            { id: 1, title: "Stade Elite", description: "Terrain synthétique.", image: "/images/terrain1.jpg" },
+            { id: 2, title: "Arena Sport", description: "Gazon naturel.", image: "/images/terrain2.jpg" },
+            { id: 3, title: "Foot Park", description: "3 terrains.", image: "/images/terrain3.jpg" },
+            { id: 4, title: "Urban Soccer", description: "Couvert climatisé.", image: "/images/terrain9.jpg" },
+            { id: 5, title: "Green Field", description: "Historique.", image: "/images/terrain5.jpg" },
+            { id: 6, title: "Pro Arena", description: "Normes FIFA.", image: "/images/terrain6.jpg" },
+            { id: 7, title: "Royal Turf", description: "Premium.", image: "/images/terrain7.jpg" },
+            { id: 8, title: "City Ground", description: "Accès facile.", image: "/images/terrain8.jpg" },
+            { id: 9, title: "Mega Arena", description: "LED & coaching.", image: "/images/terrain4.jpg" },
+            { id: 10, title: "SportLine", description: "Moderne.", image: "/images/terrain10.jpg" },
+          ].map((t) => (
+
+            <motion.div
+              key={t.id}
+              onClick={() => handleCardClick(t.id)}
+              initial={{ opacity: 0.3, scale: 0.8, filter: "blur(3px)" }}
+              whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+              transition={{ duration: 0.6 }}
+              whileHover={{ scale: 1.05, cursor: "pointer" }}
+              className="min-w-[260px] bg-white rounded-xl shadow-xl 
+                        border border-gray-200 overflow-hidden snap-center
+                        transition-all duration-500"
+            >
+
+              {/* IMAGE */}
+              <div className="h-36 overflow-hidden">
+                <img
+                  src={t.image}
+                  alt={t.title}
+                  className="w-full h-full object-cover transition-all duration-500"
+                />
+              </div>
+
+              {/* CONTENT */}
+              <div className="p-4">
+                <h3 className="font-bold text-lg text-gray-800">{t.title}</h3>
+                <p className="text-gray-600 text-sm mt-1">{t.description}</p>
+              </div>
+
+            </motion.div>
+
+          ))}
+
+        </motion.div>
+
+      </div>
+    </section>
 
       {/* ---------------------------------- TÉMOIGNAGES ---------------------------------- */}
       <section id="témoignages" className="py-20 bg-white text-black">
@@ -207,122 +349,137 @@ const Home = () => {
 
       {/* ---------------------------------- CONTACT ---------------------------------- */}
       <section id="contact" className="py-20 bg-white text-black">
-        <h2 className="text-4xl font-bold text-center mb-10 text-black-600">
-          Contactez-nous
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-10 md:px-20 items-center">
-          {/* IMAGE */}
-          <img
-            src="/images/contact.jpg"
-            alt="Contact"
-            className="rounded-3xl shadow-2xl w-full"
-          />
-          {/* FORMULAIRE */}
-          <form className="bg-gray-100 p-8 rounded-2xl shadow-xl text-black">
-            <input
-              type="text"
-              placeholder="Nom complet"
-              className="w-full p-3 mb-4 border rounded-lg"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full p-3 mb-4 border rounded-lg"
-            />
-            <textarea
-              placeholder="Message"
-              rows="5"
-              className="w-full p-3 mb-4 border rounded-lg"
-            ></textarea>
-            <button
-              type="button"
-              className="bg-green-500 text-white px-6 py-3 rounded-lg font-bold w-full hover:bg-green-400 transition"
-            >
-              Envoyer
-            </button>
-          </form>
-        </div>
-      </section>
+  <h2 className="text-4xl font-bold text-center mb-10 text-black-600">
+    Contactez-nous
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-10 md:px-20 items-center">
+
+    {/* IMAGE */}
+    <img
+      src="/images/contact.jpg"
+      alt="Contact"
+      className="rounded-3xl shadow-2xl w-full"
+    />
+
+    {/* FORMULAIRE */}
+    <form className="bg-gray-100 p-8 rounded-2xl shadow-xl text-black relative z-10">
+      <input
+        type="text"
+        placeholder="Nom complet"
+        className="w-full p-3 mb-4 border rounded-lg"
+      />
+
+      <input
+        type="email"
+        placeholder="Email"
+        className="w-full p-3 mb-4 border rounded-lg"
+      />
+
+      <textarea
+        placeholder="Message"
+        rows="5"
+        className="w-full p-3 mb-4 border rounded-lg"
+      ></textarea>
+
+      <button
+        type="button"
+        className="bg-green-500 text-green px-6 py-3 rounded-lg font-bold w-full hover:bg-green-400 transition"
+      >
+        Envoyer
+      </button>
+    </form>
+
+  </div>
+</section>
+
 
       {/* ---------------------------------- FOOTER ---------------------------------- */}
       <footer className="bg-gradient-to-b from-white to-gray-50 text-gray-800 py-12 border-t border-gray-200">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Logo et description */}
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center gap-4 mb-6">
-                <motion.img
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.8 }}
-                  src="/images/T2P-removebg-preview.png"
-                  alt="Time2Play"
-                  className="h-16 w-16"
-                />
-                <h3 className="text-2xl font-bold text-green-600">Time2Play</h3>
-              </div>
-              <p className="text-gray-600 mb-6 max-w-md">
-                Time2Play révolutionne la réservation de terrains de sport. Simple, rapide et efficace, nous connectons les passionnés de sport aux meilleurs terrains.
-              </p>
-              <div className="flex space-x-6">
-                {["Facebook", "Instagram", "Twitter", "LinkedIn"].map((social, i) => (
-                  <motion.a
-                    key={i}
-                    href="#"
-                    whileHover={{ scale: 1.2, y: -3 }}
-                    className="text-green-600 hover:text-green-700 transition-colors text-lg font-medium"
-                  >
-                    {social}
-                  </motion.a>
-                ))}
-              </div>
-            </div>
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
-            {/* Liens rapides */}
-            <div>
-              <h4 className="text-lg font-bold mb-4 text-gray-800">Liens rapides</h4>
-              <ul className="space-y-3">
-                {["Accueil", "Fonctionnalités", "Témoignages", "Contact", "Nos Terrains"].map((link, i) => (
-                  <li key={i}>
-                    <motion.a
-                      href="#"
-                      whileHover={{ x: 5 }}
-                      className="text-gray-600 hover:text-green-600 transition-colors flex items-center gap-2"
-                    >
-                      <span className="text-green-500">→</span>
-                      {link}
-                    </motion.a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Légal */}
-            <div>
-              <h4 className="text-lg font-bold mb-4 text-gray-800">Légal</h4>
-              <ul className="space-y-3">
-                {["Mentions légales", "Politique de confidentialité", "CGU", "CGV", "Cookies"].map((link, i) => (
-                  <li key={i}>
-                    <a
-                      href="#"
-                      className="text-gray-600 hover:text-green-600 transition-colors"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-300 mt-12 pt-8 text-center">
-            <p className="text-gray-600">
-              © 2025 Time2Play | Tous droits réservés {" "}
-              
-            </p>
-            
-          </div>
+      {/* Logo et description */}
+      <div className="col-span-1 md:col-span-2">
+        <div className="flex items-center gap-4 mb-6">
+          <motion.img
+            whileHover={{ rotate: 360 }}
+            transition={{ duration: 0.8 }}
+            src="/images/T2P-removebg-preview.png"
+            alt="Time2Play"
+            className="h-16 w-16"
+          />
+          <h3 className="text-2xl font-bold text-green-600">Time2Play</h3>
         </div>
-      </footer>
+
+        <p className="text-gray-600 mb-6 max-w-md">
+          Time2Play révolutionne la réservation de terrains de sport. Simple, rapide et efficace,
+          nous connectons les passionnés de sport aux meilleurs terrains.
+        </p>
+
+        {/* SOCIAL ICONS */}
+        <div className="flex space-x-6">
+          {[
+            { icon: <FaFacebook size={26} />, link: "#" },
+            { icon: <FaInstagram size={26} />, link: "#" },
+            { icon: <FaTwitter size={26} />, link: "#" },
+          ].map((item, i) => (
+            <motion.a
+              key={i}
+              href={item.link}
+              whileHover={{ scale: 1.2, y: -3 }}
+              className="text-green-600 hover:text-green-700 transition"
+            >
+              {item.icon}
+            </motion.a>
+          ))}
+        </div>
+      </div>
+
+      {/* Liens rapides */}
+      <div>
+        <h4 className="text-lg font-bold mb-4 text-gray-800">Liens</h4>
+        <ul className="space-y-3">
+          {["Accueil", "Fonctionnalités", "Témoignages", "Contact", "Nos Terrains"].map((link, i) => (
+            <li key={i}>
+              <motion.a
+                href="#"
+                whileHover={{ x: 5 }}
+                className="text-gray-600 hover:text-green-600 transition flex items-center gap-2"
+              >
+                {link}
+              </motion.a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Légal */}
+      <div>
+        <h4 className="text-lg font-bold mb-4 text-gray-800">Légal</h4>
+        <ul className="space-y-3">
+          {["Mentions légales", "Politique de confidentialité", "CGU", "CGV", "Cookies"].map((link, i) => (
+            <li key={i}>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-green-600 transition-colors"
+              >
+                {link}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    {/* COPYRIGHT */}
+    <div className="border-t border-gray-300 mt-12 pt-8 text-center">
+      <p className="text-gray-600">
+        © 2025 Time2Play | Tous droits réservés
+      </p>
+    </div>
+  </div>
+</footer>
     </div>
   );
 };
