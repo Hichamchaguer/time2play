@@ -7,7 +7,7 @@
   <li>Yassir Elmahdaoui</li>
   <li>Anas Sarsar</li>
   <li>Saad Baouli</li>
-  <li>Abderrahmane Er.radi</li>
+  <li>Abderrahmane  Er.radi</li>
 </ul>
 
 <h2>Description</h2>
