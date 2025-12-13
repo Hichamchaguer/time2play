@@ -15,6 +15,7 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 
+
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
